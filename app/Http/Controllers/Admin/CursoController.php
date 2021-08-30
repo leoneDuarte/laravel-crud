@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Curso;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 class CursoController extends Controller
 {
@@ -28,20 +29,18 @@ class CursoController extends Controller
 
     public function editar($cursoid)
     {   
-        $registro = Curso::find($cursoid);
+        $registro = Curso::find($cursoid);        
         return view('admin.cursos.editar',compact('registro'));
     }
 
     public function atualizar(Request $curso, $curso_id)
     {   
       Curso::find($curso_id)->update(['curso_id' =>  $curso_id,'curso_nome' => $curso['curso_nome'],'curso_descricao' => $curso['curso_descricao'] ,'curso_imagem' => $curso['curso_descricao'],'curso_valor' => $curso['curso_valor'], 'curso_publicado' =>'Sim']);     
-      $cursos = Curso::all();
-      return view('admin.cursos.index',compact('cursos'));
+      return Redirect::to(route('admin.cursos'));
     }
 
     public function deletar($cursoid){
         Curso::find($cursoid)->delete();  
-        $cursos = Curso::all();
-        return view('admin.cursos.index',compact('cursos'));
+        return Redirect::to(route('admin.cursos'));
     }
 }
