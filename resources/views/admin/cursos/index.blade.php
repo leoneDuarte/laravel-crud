@@ -30,6 +30,7 @@
                             <td>{{$curso->curso_publicado}}</td>
                             <td>
                                 <a href="{{route('admin.cursos.editar',$curso->curso_id)}}" class="btn deep-orange">editar</a>
+                                <a href="{{route('admin.cursos.deletar',$curso->curso_id)}}" class="btn deep-orange">Deletar</a>
                             </td>
                         </tr>                        
                     @endforeach
