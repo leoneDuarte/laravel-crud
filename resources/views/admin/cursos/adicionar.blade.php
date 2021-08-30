@@ -18,11 +18,4 @@
 
 </div>
 @endsection
-
-@if($mensagem)
-    <div class="alert alert-success">
-        <p>{{$mensagem}}</p>
-    </div>
-@endif
-
 @include('layout._includes.footer')
