@@ -3,11 +3,11 @@
 
 @include('layout._includes.topo')
 
-@section('titulo','contatos')
+@section('titulo','adicionar curso')
     
 @section('corpo')
 <div class="container">
-    <h3 class="center">ADICIONAR CURSO</h3>
+    <h3 class="center">EDITAR CURSO</h3>
 
     <div class="row">
         <form method="POST" action="{{route('admin.cursos.atualizar',$registro->curso_id)}}">            
