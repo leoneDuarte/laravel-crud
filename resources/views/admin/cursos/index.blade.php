@@ -15,25 +15,22 @@
                         <td>Id</td>
                         <td>Titulo</td>
                         <td>Descricao</td>
-                        <td>Imagem</td>
+                        <td>valor</td>
                         <td>Publicado</td>
                         <td>Ação</td>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($cursos as $curso)
-
                         <tr>
+                            <td>{{$curso->curso_id}}</td>
                             <td>{{$curso->curso_nome}}</td>
-                            <td>{{$curso->curso_nome}}</td>
-                            <td>{{$curso->curso_nome}}</td>
-                            <td>{{$curso->curso_nome}}</td>
-                            <td>{{$curso->curso_nome}}</td>
+                            <td>{{$curso->curso_descricao}}</td>
+                            <td>{{$curso->curso_valor}}</td>
+                            <td>{{$curso->curso_publicado}}</td>
                             <td>
-                                <a href="{{route('admin.cursos.editar',$curso->curso_id)}}" class="btn deep-orange"></a>
+                                <a href="{{route('admin.cursos.editar',$curso->curso_id)}}" class="btn deep-orange">editar</a>
                             </td>
-                            
-                   
                         </tr>                        
                     @endforeach
                 </tbody>
