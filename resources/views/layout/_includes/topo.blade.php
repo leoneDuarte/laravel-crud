@@ -19,11 +19,10 @@
 <header>
     <nav>
         <div class="nav-wrapper">
-        <a href="/" class="brand-logo right">Cursos</a>
+        <a href="{{route('admin.cursos')}}" class="brand-logo right">Cursos</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="/">home</a></li>
             <li><a href="{{route('admin.cursos')}}">cursos</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
         </ul>
         </div>
     </nav>
