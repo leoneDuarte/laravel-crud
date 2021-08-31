@@ -17,6 +17,7 @@ class CursoController extends Controller
 
     public function adicionar()
     {
+        
         return view('admin.cursos.adicionar');
     }
 
